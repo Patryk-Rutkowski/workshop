@@ -135,6 +135,10 @@
       <Project>{E7A67D20-307D-4327-A7A3-2E96F288E4F6}</Project>
       <Name>Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WorkshopServices\WorkshopServices.csproj">
+      <Project>{f847396b-ca89-41a3-92f7-5d0c0a7677f2}</Project>
+      <Name>WorkshopServices</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

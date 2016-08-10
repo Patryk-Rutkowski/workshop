@@ -1,0 +1,13 @@
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\WorkshopServices.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\WorkshopServices.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\Data.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\Database.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\Extensions.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\Dapper.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\Database.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\Data.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\Extensions.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\Dapper.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\obj\Debug\WorkshopServices.csprojResolveAssemblyReference.cache
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\obj\Debug\WorkshopServices.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\obj\Debug\WorkshopServices.pdb

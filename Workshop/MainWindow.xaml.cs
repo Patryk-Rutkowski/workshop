@@ -1,6 +1,8 @@
 ﻿using Database;
 using Models;
 using System.Windows;
+using WorkshopServices;
+using WorkshopServices.Implementation;
 
 namespace Workshop
 {
@@ -10,15 +12,17 @@ namespace Workshop
     public partial class MainWindow : Window
     {
 
+        private ICarService _carSrvice;
+
         public MainWindow()
         {
             InitializeComponent();
+            _carSrvice = new CarService(new CarRepository());
         }
 
         private void getCar_Click(object sender, RoutedEventArgs e)
         {
-            string vinFromTextBox = vin.Text;
-            Car car = Repository.FillObject<Car>("test", new { vin = vin.Text });
+            Car car = _carSrvice.GetByVin(vin.Text);
 
             if (car != null)
             {

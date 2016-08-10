@@ -110,3 +110,5 @@ C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\RepairHistory.bam
 C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\Workshop.g.resources
 C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\Workshop.Properties.Resources.resources
 C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\Workshop.csproj.GenerateResource.Cache
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\WorkshopServices.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\WorkshopServices.pdb
