@@ -1,0 +1,10 @@
+C:\Users\patryk.rutkowski\Desktop\Workshop\Data\bin\Debug\Data.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Data\bin\Debug\Data.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\patryk.rutkowski\Desktop\Workshop\Data\obj\Debug\Data.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Data\obj\Debug\Data.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Data\bin\Debug\Data.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Data\bin\Debug\Data.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Data\obj\Debug\Data.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Data\obj\Debug\Data.pdb

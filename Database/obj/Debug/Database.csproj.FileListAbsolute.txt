@@ -1,0 +1,7 @@
+C:\Users\patryk.rutkowski\Desktop\Workshop\Database\bin\Debug\Database.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Database\bin\Debug\Database.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop\Database\bin\Debug\Dapper.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Database\bin\Debug\Dapper.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop\Database\obj\Debug\Database.csprojResolveAssemblyReference.cache
+C:\Users\patryk.rutkowski\Desktop\Workshop\Database\obj\Debug\Database.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Database\obj\Debug\Database.pdb

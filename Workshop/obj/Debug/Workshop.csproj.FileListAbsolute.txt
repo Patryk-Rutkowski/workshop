@@ -1,0 +1,112 @@
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\bin\Debug\Workshop.exe.config
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\bin\Debug\Workshop.exe
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\bin\Debug\Workshop.pdb
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\obj\Debug\Workshop.csprojResolveAssemblyReference.cache
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\obj\Debug\MainWindow.g.cs
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\obj\Debug\App.g.cs
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\obj\Debug\Workshop_MarkupCompile.cache
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\obj\Debug\Workshop_MarkupCompile.lref
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\obj\Debug\MainWindow.baml
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\obj\Debug\Workshop.g.resources
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\obj\Debug\Workshop.Properties.Resources.resources
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\obj\Debug\Workshop.csproj.GenerateResource.Cache
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\obj\Debug\Workshop.exe
+c:\users\patryk.rutkowski\documents\visual studio 2015\Projects\Workshop\Workshop\obj\Debug\Workshop.pdb
+C:\Users\patryk.rutkowski\Documents\Visual Studio 2015\Projects\Workshop\Workshop\bin\Debug\Dapper.dll
+C:\Users\patryk.rutkowski\Documents\Visual Studio 2015\Projects\Workshop\Workshop\bin\Debug\Dapper.xml
+C:\Users\patryk.rutkowski\Documents\Visual Studio 2015\Projects\Workshop\Workshop\obj\Debug\RepairHistory.g.cs
+C:\Users\patryk.rutkowski\Documents\Visual Studio 2015\Projects\Workshop\Workshop\obj\Debug\RepairHistory.baml
+C:\Users\patryk.rutkowski\Documents\Visual Studio 2015\Projects\Workshop\Workshop\obj\Debug\AddRepair.g.cs
+C:\Users\patryk.rutkowski\Documents\Visual Studio 2015\Projects\Workshop\Workshop\obj\Debug\AddRepair.baml
+I:\Workshop\Workshop\bin\Debug\Workshop.exe.config
+I:\Workshop\Workshop\obj\Debug\Workshop.exe
+I:\Workshop\Workshop\obj\Debug\Workshop.pdb
+I:\Workshop\Workshop\obj\Debug\Workshop.csprojResolveAssemblyReference.cache
+I:\Workshop\Workshop\obj\Debug\AddRepair.g.cs
+I:\Workshop\Workshop\obj\Debug\MainWindow.g.cs
+I:\Workshop\Workshop\obj\Debug\RepairHistory.g.cs
+I:\Workshop\Workshop\obj\Debug\App.g.cs
+I:\Workshop\Workshop\obj\Debug\Workshop_MarkupCompile.cache
+I:\Workshop\Workshop\obj\Debug\Workshop_MarkupCompile.lref
+I:\Workshop\Workshop\bin\Debug\Workshop.exe
+I:\Workshop\Workshop\bin\Debug\Workshop.pdb
+I:\Workshop\Workshop\bin\Debug\Dapper.dll
+I:\Workshop\Workshop\bin\Debug\Dapper.xml
+I:\Workshop\Workshop\obj\Debug\AddRepair.baml
+I:\Workshop\Workshop\obj\Debug\MainWindow.baml
+I:\Workshop\Workshop\obj\Debug\RepairHistory.baml
+I:\Workshop\Workshop\obj\Debug\Workshop.g.resources
+I:\Workshop\Workshop\obj\Debug\Workshop.Properties.Resources.resources
+I:\Workshop\Workshop\obj\Debug\Workshop.csproj.GenerateResource.Cache
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Workshop.exe.config
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\Workshop.exe
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\Workshop.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Workshop.exe
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Workshop.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Dapper.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Dapper.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\Workshop.csprojResolveAssemblyReference.cache
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\AddRepair.g.cs
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\MainWindow.g.cs
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\RepairHistory.g.cs
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\App.g.cs
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\Workshop_MarkupCompile.cache
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\Workshop_MarkupCompile.lref
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\AddRepair.baml
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\MainWindow.baml
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\RepairHistory.baml
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\Workshop.g.resources
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\Workshop.Properties.Resources.resources
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\obj\Debug\Workshop.csproj.GenerateResource.Cache
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Database.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Database.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Data.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Data.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Extensions.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Extensions.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Models.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Models.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop\Workshop\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Workshop.exe.config
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\Workshop.exe
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\Workshop.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Workshop.exe
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Workshop.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Data.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Database.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Extensions.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Dapper.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Database.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Data.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Extensions.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\bin\Debug\Dapper.xml
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\Workshop.csprojResolveAssemblyReference.cache
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\AddRepair.g.cs
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\MainWindow.g.cs
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\RepairHistory.g.cs
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\App.g.cs
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\Workshop_MarkupCompile.cache
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\Workshop_MarkupCompile.lref
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\AddRepair.baml
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\MainWindow.baml
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\RepairHistory.baml
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\Workshop.g.resources
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\Workshop.Properties.Resources.resources
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\Workshop.csproj.GenerateResource.Cache
