@@ -12,6 +12,8 @@ namespace Database
 
         Car GetByVin(string vin);
         List<Car> GetByMakeModelYearbook(string make, string model, int yearbook);
+        List<Make> GetAvailableMakes();
+        List<CarModel> GetModelByMake(string make);
 
     }
 }
