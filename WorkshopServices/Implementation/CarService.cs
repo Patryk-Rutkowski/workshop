@@ -15,9 +15,9 @@ namespace WorkshopServices.Implementation
             this._carRepository = _carRepository;
         }
 
-        public List<Car> GetByModelMarkYearbook(string model, string mark, int yerbook)
+        public List<Car> GetByModelMarkYearbook(string make, string model, int yerbook)
         {
-            throw new NotImplementedException();
+            return _carRepository.GetByMakeModelYearbook(make, model, yerbook);
         }
 
         public Car GetByVin(string vin)

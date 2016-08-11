@@ -8,7 +8,7 @@ namespace Database
     {
         public List<Car> GetByMakeModelYearbook(string make, string model, int yearbook)
         {
-            throw new NotImplementedException();
+            return Repository.FillCollection<Car>("workshop_get_by_make_model_yearbook", new { make = make, model = model, yearbook = yearbook });
         }
 
         public Car GetByVin(string vin)
