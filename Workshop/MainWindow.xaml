@@ -5,20 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Workshop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="278.067" Width="238.344">
-    <Grid>
-        <Button x:Name="getCar" Content="Szukaj" HorizontalAlignment="Left" Margin="135,10,0,0" VerticalAlignment="Top" Width="75" Click="getCar_Click"/>
-        <TextBox x:Name="vin" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Podaj VIN"/>
-        <Label x:Name="label4" Content="Silnik" HorizontalAlignment="Left" Margin="9,117,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content="Rocznik" HorizontalAlignment="Left" Margin="9,91,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Model" HorizontalAlignment="Left" Margin="9,65,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Marka" HorizontalAlignment="Left" Margin="9,39,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="made" Content="" HorizontalAlignment="Left" Margin="91,39,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="model" Content="" HorizontalAlignment="Left" Margin="91,65,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="yearbook" Content="" HorizontalAlignment="Left" Margin="91,94,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="engine" Content="" HorizontalAlignment="Left" Margin="91,117,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="repair_history_button" Content="Historia napraw" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="96" IsEnabled="False" Click="repair_history_button_Click"/>
-        <Button x:Name="add_repair_button" Content="Dodaj naprawę" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Width="96" IsEnabled="False" Click="add_repair_button_Click"/>
+        Title="MainWindow" Height="535.228" Width="1153.038">
+   
+    <Grid Margin="0,0,0,0">
+        <Menu Width="Auto" Height="40"  Margin="0,0,0,475">
+            <MenuItem Header="Dodaj">
+                <MenuItem Header="Samochód" />
+                <MenuItem Header="Mechanik"  />
+                <MenuItem Header="Naprawa"  />
+                <MenuItem Header="Część"  />
+            </MenuItem>
+            <MenuItem Header="Aktualizuj">
+                <MenuItem Header="Samochód" />
+                <MenuItem Header="Mechanik"  />
+             
+            </MenuItem>
+            <MenuItem Header="Usuń">
+                <MenuItem Header="Mechanik"  />
+                <MenuItem Header="Część"  />
+            </MenuItem>
+        </Menu>
+
+        <Button x:Name="getCar" Content="Szukaj" HorizontalAlignment="Left" Margin="858,93,0,0" VerticalAlignment="Top" Width="75" Click="getCar_Click"/>
+        <TextBox x:Name="vin" HorizontalAlignment="Left" Height="20" Margin="917,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Podaj VIN"/>
+        <Label x:Name="label3" Content="Rocznik" HorizontalAlignment="Left" Margin="578,89,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Model" HorizontalAlignment="Left" Margin="578,57,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Marka" HorizontalAlignment="Left" Margin="578,25,0,0" VerticalAlignment="Top" Width="51" RenderTransformOrigin="2.765,0.136"/>
+        <Button x:Name="repair_history_button" Content="Historia napraw" HorizontalAlignment="Left" Margin="799,193,0,0" VerticalAlignment="Top" Width="96" IsEnabled="False" Click="repair_history_button_Click"/>
+        <Button x:Name="add_repair_button" Content="Dodaj naprawę" HorizontalAlignment="Left" Margin="799,248,0,0" VerticalAlignment="Top" Width="96" IsEnabled="False" Click="add_repair_button_Click"/>
+        <ComboBox x:Name="model_combo" HorizontalAlignment="Left" Margin="650,57,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="model_combo_SelectionChanged" />
+        <ComboBox x:Name="make_combo" HorizontalAlignment="Left" Margin="650,23,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="make_combo_SelectionChanged"/>
+        <ComboBox x:Name="yearbokk_combo" HorizontalAlignment="Left" Margin="650,93,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.485,3.281" SelectionChanged="yearbokk_combo_SelectionChanged"/>
+        <DataGrid x:Name="car_gird" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Height="398" Width="535" SelectionChanged="car_gird_SelectionChanged" ColumnWidth="70" CanUserReorderColumns="False" MaxColumnWidth="150" CanUserSortColumns="False" MinColumnWidth="80"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="858,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="VIN"/><LineBreak/><Run/></TextBlock>
+        <Button x:Name="edit_button" Content="Edytuj" HorizontalAlignment="Left" Margin="610,193,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <Button x:Name="delete_button" Content="Usuń" HorizontalAlignment="Left" Margin="610,248,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
 
     </Grid>
 </Window>
