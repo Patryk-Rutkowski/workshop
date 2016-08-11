@@ -1,5 +1,5 @@
 ﻿
-namespace Models
+namespace Data
 {
     public class CarModel
     {
