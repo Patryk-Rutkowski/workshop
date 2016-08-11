@@ -37,10 +37,10 @@ namespace WorkshopServices.Implementation.Tests
         public void GetByVinTest()
         {
             var result = new Mock<ICarRepository>();
-            result.Setup(x => x.GetByVin(It.IsAny<string>())).Returns(new Car());
+            result.Setup(x => x.GetByVin(It.IsAny<string>())).Returns((Car)null);
             _service = new CarService(result.Object);
             var a = _service.GetByVin("11111111111111111");
-            Assert.IsNotNull(a);
+            Assert.IsNull(a);
             //Assert.IsTrue(a.Vin == "11111111111111111");
         }
     }

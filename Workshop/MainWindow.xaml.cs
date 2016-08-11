@@ -1,4 +1,5 @@
 ﻿using Database;
+using Extensions;
 using Models;
 using System.Windows;
 using WorkshopServices;
@@ -22,16 +23,18 @@ namespace Workshop
 
         private void getCar_Click(object sender, RoutedEventArgs e)
         {
-            Car car = _carSrvice.GetByVin(vin.Text);
+            Result<Car> car = _carSrvice.GetByVin(vin.Text);
 
-            if (car != null)
+            if (car.Success)
             {
                 ChangeButtonState(true);
-                made.Content = car.Make;
-                model.Content = car.Model;
-                yearbook.Content = car.Yearbook;
-                engine.Content = car.Engine;
+                made.Content = car.Data.Make;
+                model.Content = car.Data.Model;
+                yearbook.Content = car.Data.Yearbook;
+                engine.Content = car.Data.Engine;
             }
+            else
+                MessageBox.Show(car.Message);
         }
 
         private void ChangeButtonState(bool state)

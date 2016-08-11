@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Models;
 using Database;
-using System;
+using Extensions;
 
 namespace WorkshopServices.Implementation
 {
@@ -15,15 +15,20 @@ namespace WorkshopServices.Implementation
             this._carRepository = _carRepository;
         }
 
-        public List<Car> GetByModelMarkYearbook(string make, string model, int yerbook)
+        Result<List<Car>> ICarService.GetByModelMarkYearbook(string make, string model, int yerbook)
         {
-            return _carRepository.GetByMakeModelYearbook(make, model, yerbook);
+            List<Car> carList = _carRepository.GetByMakeModelYearbook(make, model, yerbook);
+            Result<List<Car>> result = new Result<List<Car>>(carList);
+            result.ErrorIfDataNull();
+            return result;
         }
 
-        public Car GetByVin(string vin)
+        Result<Car> ICarService.GetByVin(string vin)
         {
-            var result = _carRepository.GetByVin(vin);
-            return _carRepository.GetByVin(vin);
+            Car car = _carRepository.GetByVin(vin);
+            Result<Car> result = new Result<Car>(car);
+            result.ErrorIfDataNull();
+            return result;
         }
     }
 }

@@ -54,6 +54,10 @@
       <Project>{e7a67d20-307d-4327-a7a3-2e96f288e4f6}</Project>
       <Name>Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Extensions\Extensions.csproj">
+      <Project>{dc25f5f7-ce59-4264-a067-61f465a058fd}</Project>
+      <Name>Extensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
