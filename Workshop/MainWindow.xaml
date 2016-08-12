@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Workshop"
         mc:Ignorable="d"
         Title="MainWindow" Height="535.228" Width="1153.038">
-   
+    <Window.DataContext>
+        <local:MainWindowModelView />
+    </Window.DataContext>
     <Grid Margin="0,0,0,0">
         <Menu Width="Auto" Height="40"  Margin="0,0,0,475">
             <MenuItem Header="Dodaj">
@@ -26,20 +28,20 @@
             </MenuItem>
         </Menu>
 
-        <Button x:Name="getCar" Content="Szukaj" HorizontalAlignment="Left" Margin="858,93,0,0" VerticalAlignment="Top" Width="75" Click="getCar_Click"/>
-        <TextBox x:Name="vin" HorizontalAlignment="Left" Height="20" Margin="917,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Podaj VIN"/>
+        <Button x:Name="getCar" Command="{Binding getCar}" Content="Szukaj" HorizontalAlignment="Left" Margin="858,93,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="Vin" Text="{Binding Vin}" HorizontalAlignment="Left" Height="20" Margin="917,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" ToolTip="Podaj VIN"/>
         <Label x:Name="label3" Content="Rocznik" HorizontalAlignment="Left" Margin="578,89,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Model" HorizontalAlignment="Left" Margin="578,57,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Marka" HorizontalAlignment="Left" Margin="578,25,0,0" VerticalAlignment="Top" Width="51" RenderTransformOrigin="2.765,0.136"/>
-        <Button x:Name="repair_history_button" Content="Historia napraw" HorizontalAlignment="Left" Margin="799,193,0,0" VerticalAlignment="Top" Width="96" IsEnabled="False" Click="repair_history_button_Click"/>
-        <Button x:Name="add_repair_button" Content="Dodaj naprawę" HorizontalAlignment="Left" Margin="799,248,0,0" VerticalAlignment="Top" Width="96" IsEnabled="False" Click="add_repair_button_Click"/>
-        <ComboBox x:Name="model_combo" HorizontalAlignment="Left" Margin="650,57,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="model_combo_SelectionChanged" />
-        <ComboBox x:Name="make_combo" HorizontalAlignment="Left" Margin="650,23,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="make_combo_SelectionChanged"/>
-        <ComboBox x:Name="yearbokk_combo" HorizontalAlignment="Left" Margin="650,93,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.485,3.281" SelectionChanged="yearbokk_combo_SelectionChanged"/>
-        <DataGrid x:Name="car_gird" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Height="398" Width="535" SelectionChanged="car_gird_SelectionChanged" ColumnWidth="70" CanUserReorderColumns="False" MaxColumnWidth="150" CanUserSortColumns="False" MinColumnWidth="80" CanUserResizeRows="False"  CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True"/>
+        <Button x:Name="repair_history_button" Command="{Binding add_repair_button}" Content="Historia napraw" HorizontalAlignment="Left" Margin="799,193,0,0" VerticalAlignment="Top" Width="96" IsEnabled="False" />
+        <Button x:Name="add_repair_button" Command="{Binding delete_button}"  Content="Dodaj naprawę" HorizontalAlignment="Left" Margin="799,248,0,0" VerticalAlignment="Top" Width="96" IsEnabled="False" />
+        <ComboBox x:Name="model_combo" ItemsSource="{Binding Model}" HorizontalAlignment="Left" Margin="650,57,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="make_combo" ItemsSource="{Binding Make}" SelectedItem="{Binding SelectedMake}" SelectedIndex="{Binding SelectedMakeIndex}"  HorizontalAlignment="Left" Margin="650,23,0,0" VerticalAlignment="Top" Width="120" />
+        <ComboBox x:Name="yearBook" ItemsSource="{Binding yearBook}" SelectedItem="{Binding SelectedYearBook}"  HorizontalAlignment="Left" Margin="650,93,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.485,3.281" />
+        <DataGrid x:Name="ListCar" ItemsSource="{Binding ListCar}" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Height="398" Width="535"  ColumnWidth="70" CanUserReorderColumns="False" MaxColumnWidth="150" CanUserSortColumns="False" MinColumnWidth="80" CanUserResizeRows="False"  CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="858,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="VIN"/><LineBreak/><Run/></TextBlock>
-        <Button x:Name="edit_button" Content="Edytuj" HorizontalAlignment="Left" Margin="610,193,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-        <Button x:Name="delete_button" Content="Usuń" HorizontalAlignment="Left" Margin="610,248,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <Button x:Name="edit_button" Command="{Binding edit_button}" Content="Edytuj" HorizontalAlignment="Left" Margin="610,193,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <Button x:Name="delete_button" Command="{Binding delete_button}" Content="Usuń" HorizontalAlignment="Left" Margin="610,248,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
 
     </Grid>
 </Window>
