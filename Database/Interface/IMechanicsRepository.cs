@@ -8,6 +8,6 @@ namespace Database.Interface
 
         DMLResult CreateNewMechanic(string name, double salary);
         List<ComboBoxMechanic> GetIdNameMechanics();
-
+        DMLResult UpdateMechanic(int id, string name, double salary);
     }
 }

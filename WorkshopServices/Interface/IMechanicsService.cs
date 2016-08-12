@@ -9,6 +9,6 @@ namespace WorkshopServices.Interface
 
         Result<DMLResult> CreateNewMechanic(string name, double salary);
         Result<List<ComboBoxMechanic>> GetIdNameMechanics();
-
+        Result<DMLResult> UpdateMechanic(int id, string name, double salary);
     }
 }

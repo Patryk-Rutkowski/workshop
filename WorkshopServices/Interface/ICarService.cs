@@ -13,5 +13,6 @@ namespace WorkshopServices
         Result<List<Make>> GetAvailableMakes();
         Result<List<CarModel>> GetModelByMake(string make);
         Result<DMLResult> CreateNewCar(string make, string model, int yearbook, string engine, string vin);
+        Result<DMLResult> UpdateCar(string make, string model, int yearbook, string engine, string vin);
     }
 }

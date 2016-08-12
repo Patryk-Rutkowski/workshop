@@ -32,5 +32,13 @@ namespace WorkshopServices.Implementation
             result.ErrorIfDataNull();
             return result;
         }
+
+        public Result<DMLResult> UpdateMechanic(int id, string name, double salary)
+        {
+            DMLResult insertResult = _mechanicsRepository.UpdateMechanic(id, name, salary);
+            Result<DMLResult> result = new Result<DMLResult>(insertResult);
+            result.InsertCheck();
+            return result;
+        }
     }
 }

@@ -11,3 +11,16 @@ C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\Dapper.xm
 C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\obj\Debug\WorkshopServices.csprojResolveAssemblyReference.cache
 C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\obj\Debug\WorkshopServices.dll
 C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\obj\Debug\WorkshopServices.pdb
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\bin\Debug\WorkshopServices.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\bin\Debug\WorkshopServices.pdb
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\bin\Debug\Data.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\bin\Debug\Database.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\bin\Debug\Extensions.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\bin\Debug\Dapper.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\bin\Debug\Database.pdb
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\bin\Debug\Data.pdb
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\bin\Debug\Extensions.pdb
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\bin\Debug\Dapper.xml
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\obj\Debug\WorkshopServices.csprojResolveAssemblyReference.cache
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\obj\Debug\WorkshopServices.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\obj\Debug\WorkshopServices.pdb

@@ -1,6 +1,6 @@
 ﻿using Data;
 
-namespace Extensions
+namespace Data
 {
     public class Result<T>
     {

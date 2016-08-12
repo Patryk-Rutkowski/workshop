@@ -38,7 +38,7 @@
         <ComboBox x:Name="yearbokk_combo" HorizontalAlignment="Left" Margin="650,93,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.485,3.281" SelectionChanged="yearbokk_combo_SelectionChanged"/>
         <DataGrid x:Name="car_gird" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Height="398" Width="535" SelectionChanged="car_gird_SelectionChanged" ColumnWidth="70" CanUserReorderColumns="False" MaxColumnWidth="150" CanUserSortColumns="False" MinColumnWidth="80" CanUserResizeRows="False"  CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="858,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="VIN"/><LineBreak/><Run/></TextBlock>
-        <Button x:Name="edit_button" Content="Edytuj" HorizontalAlignment="Left" Margin="610,193,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <Button x:Name="edit_button" Content="Edytuj" HorizontalAlignment="Left" Margin="610,193,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="edit_button_Click"/>
         <Button x:Name="delete_button" Content="Usuń" HorizontalAlignment="Left" Margin="610,248,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
 
     </Grid>

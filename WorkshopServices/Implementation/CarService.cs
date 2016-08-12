@@ -55,5 +55,13 @@ namespace WorkshopServices.Implementation
             result.ErrorIfDataNull();
             return result;
         }
+
+        public Result<DMLResult> UpdateCar(string make, string model, int yearbook, string engine, string vin)
+        {
+            DMLResult insert = _carRepository.UpdateCar(make, model, yearbook, engine, vin);
+            Result<DMLResult> result = new Result<DMLResult>(insert);
+            result.InsertCheck();
+            return result;
+        }
     }
 }

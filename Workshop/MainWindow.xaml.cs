@@ -116,5 +116,11 @@ namespace Workshop
             }
 
         }
+
+        private void edit_button_Click(object sender, RoutedEventArgs e)
+        {
+            AddCar addCar = new AddCar();
+            addCar.Show();
+        }
     }
 }

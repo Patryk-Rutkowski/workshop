@@ -30,5 +30,10 @@ namespace Database
         {
             return Repository.FillCollection<CarModel>("workshop_get_model_by_make", new { make = make });
         }
+
+        public DMLResult UpdateCar(string make, string model, int yearbook, string engine, string vin)
+        {
+            return Repository.InsertObject("workshop_update_car", new { make = make, model = model, yearbook = yearbook, engine = engine, vin = vin });
+        }
     }
 }

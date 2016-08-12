@@ -16,5 +16,10 @@ namespace Database.Implementation
         {
             return Repository.FillCollection<ComboBoxMechanic>("workshop_get_mechanics", new { });
         }
+
+        public DMLResult UpdateMechanic(int id, string name, double salary)
+        {
+            return Repository.InsertObject("workshop_update_mechanic", new {id = id, name = name, salary = salary });
+        }
     }
 }
