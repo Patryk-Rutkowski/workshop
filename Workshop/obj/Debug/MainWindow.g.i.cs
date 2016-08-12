@@ -136,6 +136,14 @@ namespace Workshop {
         #line default
         #line hidden
         
+        
+        #line 22 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Menu menu;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -219,6 +227,9 @@ namespace Workshop {
             
             #line default
             #line hidden
+            return;
+            case 13:
+            this.menu = ((System.Windows.Controls.Menu)(target));
             return;
             }
             this._contentLoaded = true;

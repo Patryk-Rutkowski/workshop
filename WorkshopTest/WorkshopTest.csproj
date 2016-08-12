@@ -59,6 +59,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Implementation\CarServiceTests.cs" />
+    <Compile Include="Implementation\MechanicsServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

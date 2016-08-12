@@ -1,10 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Data;
 
 namespace Database
 {
     public class CarRepository : ICarRepository
     {
+        public DMLResult CreateCar(string make, string model, int yearbook, string engine, string vin)
+        {
+            return Repository.InsertObject("workshop_insert_car", new { make = make, model = model, yearbook = yearbook, engine = engine, vin = vin});
+        }
+
         public List<Make> GetAvailableMakes()
         {
             return Repository.FillCollection<Make>("workshop_get_makes", new { });

@@ -12,13 +12,6 @@ namespace WorkshopServices.Implementation.Tests
 
         private CarService _service;
 
-
-        [TestMethod()]
-        public void CarServiceTest()
-        {
-            Assert.Fail();
-        }
-
         [TestMethod()]
         public void GetByModelMarkYearbookTest()
         {
@@ -26,11 +19,15 @@ namespace WorkshopServices.Implementation.Tests
             Car car = new Car();
             List<Car> carList = new List<Car>();
             carList.Add(car);
-            result.Setup(x => x.GetByMakeModelYearbook(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<int>())).Returns(new List<Car>());
+            result.Setup(x => x.GetByMakeModelYearbook(It.IsAny<string>(),
+                                                       It.IsAny<string>(),
+                                                       It.IsAny<int>()))
+                        .Returns(new List<Car>());
             _service = new CarService(result.Object);
-            //var a = _service.GetByModelMarkYearbook("Honda", "Accord", 2003);
 
-            //Assert.IsNotNull(a);
+            var a = _service.GetByModelMarkYearbook("Honda", "Accord", 2003);
+            Assert.IsNotNull(a);
+            Assert.IsTrue(a.Success);
         }
 
         [TestMethod()]
@@ -39,9 +36,55 @@ namespace WorkshopServices.Implementation.Tests
             var result = new Mock<ICarRepository>();
             result.Setup(x => x.GetByVin(It.IsAny<string>())).Returns((Car)null);
             _service = new CarService(result.Object);
-            //var a = _service.GetByVin("11111111111111111");
-            //Assert.IsNull(a);
-            //Assert.IsTrue(a.Vin == "11111111111111111");
+
+            var a = _service.GetByVin("11111111111111111");
+            Assert.IsNull(a.Data);
+            //Assert.IsTrue(a.Success);
+        }
+
+        [TestMethod()]
+        public void CreateNewCarTest()
+        {
+            var result = new Mock<ICarRepository>();
+            DMLResult testResult = new DMLResult();
+            testResult.Count = 1;
+            result.Setup(x => x.CreateCar(It.IsAny<string>(),
+                                          It.IsAny<string>(),
+                                          It.IsAny<int>(),
+                                          It.IsAny<string>(),
+                                          It.IsAny<string>()))
+                         .Returns(testResult);
+
+            _service = new CarService(result.Object);
+            var a = _service.CreateNewCar("Honda", "Accord", 2003, "2.0", "111");
+            Assert.IsNotNull(a);
+            Assert.IsTrue(a.Success);
+        }
+
+        [TestMethod()]
+        public void GetAvailableMakesTest()
+        {
+            var result = new Mock<ICarRepository>();
+            List<Make> makes = new List<Make>();
+            result.Setup(x => x.GetAvailableMakes()).Returns(makes);
+
+            _service = new CarService(result.Object);
+            var a = _service.GetAvailableMakes();
+            Assert.IsNotNull(a);
+            Assert.IsTrue(a.Success);
+        }
+
+        [TestMethod()]
+        public void GetModelByMakeTest()
+        {
+            var result = new Mock<ICarRepository>();
+            List<CarModel> models = new List<CarModel>();
+            result.Setup(x => x.GetModelByMake(It.IsAny<string>())).Returns(models);
+
+            _service = new CarService(result.Object);
+            var a = _service.GetModelByMake("Honda");
+            Assert.IsNotNull(a);
+            Assert.IsTrue(a.Success);
         }
     }
 }

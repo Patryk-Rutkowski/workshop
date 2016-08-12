@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementation\CarRepository.cs" />
+    <Compile Include="Implementation\MechanicsRepository.cs" />
     <Compile Include="Interface\ICarRepository.cs" />
+    <Compile Include="Interface\IMechanicsRepository.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

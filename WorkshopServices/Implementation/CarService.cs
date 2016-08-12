@@ -16,6 +16,14 @@ namespace WorkshopServices.Implementation
             this._carRepository = _carRepository;
         }
 
+        public Result<DMLResult> CreateNewCar(string make, string model, int yearbook, string engine, string vin)
+        {
+            DMLResult insert = _carRepository.CreateCar(make, model, yearbook, engine, vin);
+            Result<DMLResult> result = new Result<DMLResult>(insert);
+            result.InsertCheck();
+            return result;
+        }
+
         public Result<List<Make>> GetAvailableMakes()
         {
             List<Make> makes = _carRepository.GetAvailableMakes();
@@ -32,7 +40,7 @@ namespace WorkshopServices.Implementation
             return result;
         }
 
-        Result<List<Car>> ICarService.GetByModelMarkYearbook(string make, string model, int yerbook)
+        public Result<List<Car>> GetByModelMarkYearbook(string make, string model, int yerbook)
         {
             List<Car> carList = _carRepository.GetByMakeModelYearbook(make, model, yerbook);
             Result<List<Car>> result = new Result<List<Car>>(carList);
@@ -40,7 +48,7 @@ namespace WorkshopServices.Implementation
             return result;
         }
 
-        Result<Car> ICarService.GetByVin(string vin)
+        public Result<Car> GetByVin(string vin)
         {
             Car car = _carRepository.GetByVin(vin);
             Result<Car> result = new Result<Car>(car);

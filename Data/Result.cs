@@ -1,4 +1,6 @@
-﻿namespace Extensions
+﻿using Data;
+
+namespace Extensions
 {
     public class Result<T>
     {
@@ -21,6 +23,17 @@
                 Message = "Nie znaleziono obiektu";
             }
                 
+        }
+
+        public void InsertCheck()
+        {
+            DMLResult insertResult = (DMLResult)(object)Data;
+            if (!insertResult.Success)
+            {
+                //TODO Zapis do tabeli z errorami
+                Success = false;
+                Message = "";
+            }
         }
 
     }

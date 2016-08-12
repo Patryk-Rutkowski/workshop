@@ -14,6 +14,7 @@ namespace Database
         List<Car> GetByMakeModelYearbook(string make, string model, int yearbook);
         List<Make> GetAvailableMakes();
         List<CarModel> GetModelByMake(string make);
+        DMLResult CreateCar(string make, string model, int yearbook, string engine, string vin);
 
     }
 }
