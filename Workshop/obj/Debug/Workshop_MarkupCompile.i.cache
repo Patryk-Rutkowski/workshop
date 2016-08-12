@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\obj\Debug\
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Workshop\obj\Debug\
 Workshop
 none
 false
 DEBUG;TRACE
-C:\Users\patryk.rutkowski\Desktop\Workshop2\Workshop\App.xaml
-6-379216141
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Workshop\App.xaml
+3786090269
 
-14-706390093
-722092647204
-AddCar.xaml;AddMechanic.xaml;AddPart.xaml;AddRepair.xaml;MainWindow.xaml;RepairHistory.xaml;
+13-1057232339
+78-1611551858
+AddRepair.xaml;MainWindow.xaml;RepairHistory.xaml;
 
-False
+True
 

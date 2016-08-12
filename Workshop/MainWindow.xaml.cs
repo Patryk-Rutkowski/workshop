@@ -15,24 +15,26 @@ namespace Workshop
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ICarService _carSrvice;
+      //  private ICarService _carSrvice;
+
 
         public MainWindow()
         {
+            InitializeComponent();
+            /*
             DateTime a = DateTime.Now;
             int actualYear = a.Year;
             int minYear = 1950;
-            InitializeComponent();
+            
             _carSrvice = new CarService(new CarRepository());
 
             Result<List<Make>> car = _carSrvice.GetAvailableMakes();
             foreach(Make singleCar in car.Data)
                 make_combo.Items.Add(singleCar);
-          
-            for(int i = actualYear;  i >= minYear; i-- )
-                yearbokk_combo.Items.Add(i);
+          */
+           
         }
-
+        /*
         private void getCar_Click(object sender, RoutedEventArgs e)
         {
             Result<Car> car = _carSrvice.GetByVin(vin.Text);
@@ -115,12 +117,6 @@ namespace Workshop
                     MessageBox.Show(car.Message);
             }
 
-        }
-
-        private void edit_button_Click(object sender, RoutedEventArgs e)
-        {
-            AddCar addCar = new AddCar();
-            addCar.Show();
-        }
+        }*/
     }
 }
