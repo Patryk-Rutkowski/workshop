@@ -8,11 +8,11 @@ using Data;
 
 namespace Database.Implementation
 {
-    class ErrorRepository : IErrorRepository
+    public class ErrorRepository : IErrorRepository
     {
         public DMLResult Insert(string message, DateTime date)
         {
-            throw new NotImplementedException();
+            return Repository.FillObject<DMLResult>("workshop_insert_error", new { error_time = date, error_msg = message });
         }
     }
 }

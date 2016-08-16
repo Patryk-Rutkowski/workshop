@@ -5,7 +5,7 @@ using Database.Interface;
 
 namespace Database.Implementation
 {
-   public class RepairRepository : IRepairRepository
+    public class RepairRepository : IRepairRepository
     {
         public List<DMLResult> CreateNewRepair(string vin, double price, int mileage, DateTime repairDate, int mechanicId, double partsPrice, int[] partsId)
         {

@@ -1,14 +1,25 @@
 ﻿using System;
 using Data;
 using WorkshopServices.Interface;
+using Database.Interface;
 
 namespace WorkshopServices.Implementation
 {
-    class ErrorService : IErrorService
+    public class ErrorService : IErrorService
     {
+        private IErrorRepository _errorRepository;
+
+        public ErrorService(IErrorRepository _errorRepository)
+        {
+            this._errorRepository = _errorRepository;
+        }
+
         public Result<DMLResult> Insert(string message, DateTime date)
         {
-            throw new NotImplementedException();
+            DMLResult insert = _errorRepository.Insert(message, date);
+            Result<DMLResult> result = new Result<DMLResult>(insert);
+            result.InsertCheck();
+            return result;
         }
     }
 }
