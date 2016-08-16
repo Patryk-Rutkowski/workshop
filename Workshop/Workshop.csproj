@@ -98,6 +98,7 @@
     <Compile Include="AddRepair.xaml.cs">
       <DependentUpon>AddRepair.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddRepairModelView.cs" />
     <Compile Include="MainWindowModelView.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="RepairHistory.xaml.cs">

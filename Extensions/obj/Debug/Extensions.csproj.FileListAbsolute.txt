@@ -10,6 +10,5 @@ C:\Users\patryk.rutkowski\Desktop\Workshop2\Extensions\obj\Debug\Extensions.dll
 C:\Users\patryk.rutkowski\Desktop\Workshop2\Extensions\obj\Debug\Extensions.pdb
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Extensions\bin\Debug\Extensions.dll
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Extensions\bin\Debug\Extensions.pdb
-C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Extensions\obj\Debug\Extensions.csprojResolveAssemblyReference.cache
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Extensions\obj\Debug\Extensions.dll
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Extensions\obj\Debug\Extensions.pdb

@@ -7,7 +7,7 @@ using Data;
 
 namespace Database
 {
-    class CategoryRepository : ICategoryRepository
+   public  class CategoryRepository : ICategoryRepository
     {
         public DMLResult CreateNewCategory(string name)
         {
