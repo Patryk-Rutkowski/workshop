@@ -10,6 +10,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="repairsData" HorizontalAlignment="Left" VerticalAlignment="Top" Height="289" Width="577" FrozenColumnCount="5" CanUserReorderColumns="False" MaxColumnWidth="150" CanUserSortColumns="False" MinColumnWidth="80" CanUserResizeRows="False"  CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True"/>
+        <DataGrid x:Name="repairsData" ItemsSource="{Binding ShowHistory}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="289" Width="577" FrozenColumnCount="5" CanUserReorderColumns="False" MaxColumnWidth="150" CanUserSortColumns="False" MinColumnWidth="80" CanUserResizeRows="False"  CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True"/>
     </Grid>
 </Window>

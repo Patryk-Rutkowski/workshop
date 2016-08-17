@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Workshop\App.xaml
-3786090269
+5824713345
 
-10-317568150
+151325276150
 791619859212
-AddRepair.xaml;MainWindow.xaml;RepairHistory.xaml;
+View\AddCar.xaml;View\AddRepair.xaml;View\Edit.xaml;View\MainWindow.xaml;View\RepairHistory.xaml;
 
 False
 

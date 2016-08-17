@@ -20,7 +20,7 @@ namespace WorkshopServices.Implementation
         {
             List<DMLResult> insertResult = _repairRepository.CreateNewRepair(vin, price, mileage, repairDate, mechanicId, partsPrice, partsId);
             Result<List<DMLResult>> result = new Result<List<DMLResult>>(insertResult);
-            result.InsertCheck();
+            //result.InsertCheck();
             return result;
         }
 

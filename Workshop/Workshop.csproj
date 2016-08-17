@@ -95,20 +95,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddRepair.xaml.cs">
+    <Compile Include="View\AddCar.xaml.cs">
+      <DependentUpon>AddCar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\AddCarModelView.cs" />
+    <Compile Include="View\AddRepair.xaml.cs">
       <DependentUpon>AddRepair.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddRepairModelView.cs" />
-    <Compile Include="MainWindowModelView.cs" />
-    <Compile Include="RelayCommand.cs" />
-    <Compile Include="RepairHistory.xaml.cs">
+    <Compile Include="ViewModel\AddRepairModelView.cs" />
+    <Compile Include="View\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\EditModelView.cs" />
+    <Compile Include="ViewModel\MainWindowModelView.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="View\RepairHistory.xaml.cs">
       <DependentUpon>RepairHistory.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddRepair.xaml">
+    <Compile Include="ViewModel\RepairHistoryModelView.cs" />
+    <Page Include="View\AddCar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AddRepair.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="View\Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -116,11 +133,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="RepairHistory.xaml">
+    <Page Include="View\RepairHistory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,6 +192,7 @@
       <Name>WorkshopServices</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

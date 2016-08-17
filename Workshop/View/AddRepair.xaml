@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:Workshop"
         mc:Ignorable="d"
         Title="AddRepair" Height="265.165" Width="552.697">
-    <Window.DataContext>
+    <!--<Window.DataContext>
         <local:AddRepairModelView />
-    </Window.DataContext>
+    </Window.DataContext>-->
     <Grid>
         
         <ComboBox x:Name="categoryComboBox" ItemsSource="{Binding GetAllCategory}" SelectedIndex="{Binding CategoryIndex}" HorizontalAlignment="Left" Margin="99,37,0,0" VerticalAlignment="Top" Width="120" />
@@ -26,7 +26,7 @@
         <Label x:Name="label4" Content="Mechanik" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="mechanicsComboBox" ItemsSource="{Binding Mechanics}" SelectedItem="{Binding SelectedMechanic}" HorizontalAlignment="Left" Margin="99,10,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="add_Copy" Command="{Binding AddPart}" Content=">>" HorizontalAlignment="Left" Margin="224,64,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.267,0.046" />
-        <DataGrid x:Name="SetParts" ItemsSource="{Binding SetParts}" HorizontalAlignment="Left" Margin="304,10,0,0" VerticalAlignment="Top" Height="189" Width="231" CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True" CanUserResizeRows="False" CanUserSortColumns="False"/>
+        <DataGrid x:Name="SetParts" ItemsSource="{Binding SetParts}" SelectedIndex="{Binding SelectedCar}" HorizontalAlignment="Left" Margin="304,10,0,0" VerticalAlignment="Top" Height="189" Width="231" CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True" CanUserResizeRows="False" CanUserSortColumns="False"/>
         <Label x:Name="label5" Content="Data" HorizontalAlignment="Left" Margin="15,175,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

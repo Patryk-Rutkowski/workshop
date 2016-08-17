@@ -1,0 +1,23 @@
+﻿<Window x:Class="Workshop.Edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Workshop"
+        mc:Ignorable="d"
+        Title="Edit" Height="300" Width="300">
+    <Grid Height="213" VerticalAlignment="Top" Margin="0,0,0,-2">
+        <Button x:Name="buttonAddEditCar" Command="{Binding EditCar}" Content="Zmień" HorizontalAlignment="Left" Margin="112,172,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.466,-0.852" />
+        <Label x:Name="label" Content="Marka" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="VIN" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Model" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="Silnik" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,-0.402"/>
+        <Label x:Name="label4_Copy" Content="Rocznik" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Height="28"/>
+        <TextBox x:Name="textBoxVin" IsEnabled="False" Text="{Binding Vin}" HorizontalAlignment="Left" Height="23" Margin="64,9,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxMake" Text="{Binding Make}" HorizontalAlignment="Left" Height="23" Margin="64,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxModel" Text="{Binding Model}" HorizontalAlignment="Left" Height="23" Margin="64,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxDate" Text="{Binding Year}" HorizontalAlignment="Left" Height="23" Margin="64,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxEngine" Text="{Binding Engine}" HorizontalAlignment="Left" Height="23" Margin="64,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+
+    </Grid>
+</Window>
