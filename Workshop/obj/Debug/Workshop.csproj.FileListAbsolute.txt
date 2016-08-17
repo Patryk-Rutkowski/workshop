@@ -171,3 +171,5 @@ C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Workshop\bin\Debug\ko\Syst
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Workshop\bin\Debug\ru\System.Windows.Interactivity.resources.dll
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Workshop\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Workshop\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Workshop\bin\Debug\Resolvers.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Workshop\bin\Debug\Resolvers.pdb

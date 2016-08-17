@@ -4,10 +4,12 @@ using Database.Implementation;
 using Database.Interface;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using WorkshopServices;
 using WorkshopServices.Implementation;
@@ -15,20 +17,27 @@ using WorkshopServices.Interface;
 
 namespace Workshop
 {
-    public class AddRepairModelView: INotifyPropertyChanged
+    public class AddRepairModelView : INotifyPropertyChanged
     {
         public List<Category> categories = new List<Category>();
         public List<ComboBoxMechanic> mechanics;// = new Result<List<Mechanic>>();
         public List<ComboBoxPart> parts;
+        public ObservableCollection<Part> czesci = new ObservableCollection<Part>();
+        // public List<Part> 
+
         int indexCategory = -1;
         int cenaNaprawy;
         int cenaCzesci;
-        string vin = null;
+       // string vin = null;
         string przebieg;
+        ComboBoxMechanic mechanik;
+        DateTime data = DateTime.Now;
+        string nazwaCzesci;
         public event PropertyChangedEventHandler PropertyChanged;
-        public  IMechanicsService _mechanicsRepository;
+        public IMechanicsService _mechanicsRepository;
         public ICategoryService _categoryRepository;
         public IPartService _partRepository;
+        public IRepairService _repairRepository;
 
 
         public AddRepairModelView()
@@ -36,9 +45,10 @@ namespace Workshop
             _mechanicsRepository = new MechanicsService(new MechanicsRepository());
             _categoryRepository = new CategoryService(new CategoryRepository());
             _partRepository = new PartService(new PartRepository());
+            _repairRepository = new RepairService(new RepairRepository());
             Mechanics = GetAllMechanics();
             GetAllCategory = GetCategory();
-            
+
         }
 
 
@@ -65,10 +75,11 @@ namespace Workshop
         public List<Category> GetAllCategory
         {
             get { return categories; }
-            set {
+            set
+            {
                 categories = value;
                 OnPropertyChanged("GetAllCategory");
-                }
+            }
         }
 
         public List<ComboBoxPart> GetParts
@@ -83,7 +94,7 @@ namespace Workshop
 
         public int CategoryIndex
         {
-            get { return indexCategory;  }
+            get { return indexCategory; }
             set
             {
                 indexCategory = value;
@@ -120,13 +131,72 @@ namespace Workshop
                 OnPropertyChanged("CenaCzesci");
             }
         }
+
+        public DateTime Data
+        {
+            get { return data; }
+            set
+            {
+                data = value;
+                OnPropertyChanged("Data");
+            }
+        }
+        public string SelectedPart
+        {
+            get { return nazwaCzesci; }
+            set
+            {
+                nazwaCzesci = value;
+                OnPropertyChanged("SelectedPart");
+            }
+        }
+
+
+        public ComboBoxMechanic SelectedMechanic
+        {
+            get { return mechanik; }
+            set
+            {
+                mechanik = value;
+                OnPropertyChanged("SelectedMechanic");
+            }
+
+        }
+        public ObservableCollection<Part> SetParts
+        {
+            get { return czesci; }
+            set
+            {
+                czesci = value;
+                OnPropertyChanged("SetParts");
+            }
+        }
         //TODO button addpart to datagird
-        //public ICommand AddPart { get { return new (); } }
+        public ICommand AddPart { get { return new RelayCommand(SetPartToList, CheckValue); } }
+
+        public ICommand AddAll { get { return new RelayCommand(ExecuteOrder, CheckAll); } }
+
+        private bool CheckAll()
+        {
+            if (CenaNaprawy != 0 && CenaCzesci != 0 && Przebieg != null && data != null && czesci.Count != 0)
+                return true;
+            else
+                return false;
+        }
+
+        private void ExecuteOrder()
+        {
+            int[] partsId;
+            MessageBox.Show(SelectedMechanic.Id.ToString());
+
+            //  Result<List<DMLResult>> repair = _repairRepository.CreateNewRepair(vin,CenaNaprawy, Przebieg, data, );
+
+        }
 
         public List<ComboBoxMechanic> GetAllMechanics()
         {
             List<ComboBoxMechanic> mechanicsAll = new List<ComboBoxMechanic>();
-            Result<List<ComboBoxMechanic>> mechaniker   = _mechanicsRepository.GetIdNameMechanics();
+            Result<List<ComboBoxMechanic>> mechaniker = _mechanicsRepository.GetIdNameMechanics();
             foreach (ComboBoxMechanic singleMechanic in mechaniker.Data)
                 mechanicsAll.Add(singleMechanic);
             return mechanicsAll;
@@ -144,19 +214,48 @@ namespace Workshop
         public List<ComboBoxPart> GetAllParts()
         {
             List<ComboBoxPart> listParts = new List<ComboBoxPart>();
-            Result<List<ComboBoxPart>> parts = _partRepository.GetPartsByCategory(indexCategory+1);   // Repository.FillCollection<Part>("workshop_get_parts_by_category", new { category_id = SelectedName });
+            Result<List<ComboBoxPart>> parts = _partRepository.GetPartsByCategory(indexCategory + 1);   // Repository.FillCollection<Part>("workshop_get_parts_by_category", new { category_id = SelectedName });
             foreach (ComboBoxPart singlePart in parts.Data)
                 listParts.Add(singlePart);
             return listParts;
         }
 
-        //TODO method to add part to list 
         public void SetPartToList()
         {
+            Part czesc = new Part();
 
-            //SetParts = 
-
+            czesc.Name = nazwaCzesci;
+            czesc.ID = 
+            czesci.Add(czesc);
+            
+            SetParts = czesci;
         }
-        //TODO method to check values
+        public bool CheckValue()
+        {
+            if (SelectedPart != null)
+                return true;
+            else
+                return false;
+        }
+    /*    public void ExecuteOrder()
+        {
+            public int[] idCzesci = new int[czesci.Count()];
+        MessageBox.Show(SelectedName);
+            foreach(Part one in czesci)
+            idCzesci
+        //  Result<List<DMLResult>> repair = _repairRepository.CreateNewRepair(vin,CenaNaprawy, Przebieg, data, );
     }
+
+    public bool CheckAll()
+    {
+        if (CenaNaprawy != 0 && CenaCzesci != 0 && Przebieg != null && data != null && czesci.Count != 0)
+            return true;
+        else
+            return false;
+    }*/
+
+
 }
+
+}
+

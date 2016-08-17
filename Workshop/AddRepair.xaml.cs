@@ -14,12 +14,11 @@ namespace Workshop
     /// </summary>
     public partial class AddRepair : Window
     {
-        string vin = null;
+        public string vin = null;
 
         public AddRepair(string numberVin)
         {
             vin = numberVin;
-          //  Mechanics = GetAllMechanics();
             InitializeComponent();
         }
     

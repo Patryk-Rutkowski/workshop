@@ -1,6 +1,7 @@
 ﻿using Data;
 using Database;
 using Extensions;
+using Resolvers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,7 @@ namespace Workshop
         public MainWindowModelView()
         {
             selectedYear = 0;
-            _carSrvice = new CarService(new CarRepository());
+            _carSrvice = ICarServiceResolver.Get();
             car_ = new Car();
             listCar = new List<Car>();
             year = new List<int>();
@@ -133,6 +134,10 @@ namespace Workshop
             {
                 selectedModel = value;
                 OnPropertyChanged("SelectedModel");
+                if (allSelected())
+                {
+                    ListCar = GetCarMakeModelYearbook();
+                }
             }
 
         }
