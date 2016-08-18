@@ -41,13 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementation\CarService.cs" />
-    <Compile Include="Implementation\ErrorService.cs" />
     <Compile Include="Implementation\MechanicService.cs" />
     <Compile Include="Implementation\CategoryService.cs" />
     <Compile Include="Implementation\PartService.cs" />
     <Compile Include="Implementation\RepairService.cs" />
     <Compile Include="Interface\ICarService.cs" />
-    <Compile Include="Interface\IErrorService.cs" />
     <Compile Include="Interface\IMechanicsService.cs" />
     <Compile Include="Interface\ICategoryService.cs" />
     <Compile Include="Interface\IPartService.cs" />

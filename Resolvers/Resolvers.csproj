@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="ICarServiceResolver.cs" />
     <Compile Include="ICategoryServiceResolver.cs" />
-    <Compile Include="IErrorServiceResolver.cs" />
     <Compile Include="IMechanicsServiceResolver.cs" />
     <Compile Include="IPartServiceResolver.cs" />
     <Compile Include="IRepairServiceResolver.cs" />

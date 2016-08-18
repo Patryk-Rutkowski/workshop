@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Data;
-using Extensions;
 using WorkshopServices.Interface;
 using Database.Interface;
 
@@ -16,11 +15,19 @@ namespace WorkshopServices.Implementation
             this._repairRepository = _repairRepository;
         }
 
-        public Result<List<DMLResult>> CreateNewRepair(string vin, double price, int mileage, DateTime repairDate, int mechanicId, double partsPrice, int[] partsId)
+        public Result<DMLResult> CreateNewRepair(string vin, double price, int mileage, DateTime repairDate, int mechanicId, double partsPrice, int[] partsId)
         {
+            Result<DMLResult> result = null;
             List<DMLResult> insertResult = _repairRepository.CreateNewRepair(vin, price, mileage, repairDate, mechanicId, partsPrice, partsId);
-            Result<List<DMLResult>> result = new Result<List<DMLResult>>(insertResult);
-            //result.InsertCheck();
+
+            foreach ( DMLResult singleDML in insertResult )
+            {
+                result = new Result<DMLResult>(singleDML);
+                result.InsertCheck();
+                if (!result.Success)
+                    break;
+            }
+
             return result;
         }
 

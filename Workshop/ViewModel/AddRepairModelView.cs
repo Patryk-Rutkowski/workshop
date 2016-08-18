@@ -192,8 +192,7 @@ namespace Workshop
                 partsId[i] = czesci[i].Id;
                 MessageBox.Show(partsId[i].ToString());
             }
-           Result<List<DMLResult>> repair = _repairRepository.CreateNewRepair(vin,Convert.ToDouble(CenaNaprawy), Convert.ToInt32(Przebieg), data, SelectedMechanic.Id, Convert.ToDouble(CenaCzesci), partsId);
-
+           Result<DMLResult> repair = _repairRepository.CreateNewRepair(vin,Convert.ToDouble(CenaNaprawy), Convert.ToInt32(Przebieg), data, SelectedMechanic.Id, Convert.ToDouble(CenaCzesci), partsId);
         }
 
         public List<ComboBoxMechanic> GetAllMechanics()

@@ -8,7 +8,7 @@ namespace WorkshopServices.Interface
     public interface IRepairService
     {
 
-        Result<List<DMLResult>> CreateNewRepair(string vin, double price, int mileage, DateTime repairDate, int mechanicId, double partsPrice, int[] partsId);
+        Result<DMLResult> CreateNewRepair(string vin, double price, int mileage, DateTime repairDate, int mechanicId, double partsPrice, int[] partsId);
         Result<List<RepairTablePresentation>> GetRepairHistoryByVin(string vin);
 
     }
