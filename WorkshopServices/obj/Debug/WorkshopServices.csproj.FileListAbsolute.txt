@@ -24,3 +24,5 @@ C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\bin\Debug
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\obj\Debug\WorkshopServices.csprojResolveAssemblyReference.cache
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\obj\Debug\WorkshopServices.dll
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\WorkshopServices\obj\Debug\WorkshopServices.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\NLog.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\WorkshopServices\bin\Debug\NLog.xml

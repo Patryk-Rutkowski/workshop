@@ -9,6 +9,7 @@ namespace Data
         public string Message { get; set; } = null;
         public bool Success { get; set; } = true;
 
+
         public Result(T data)
         {
             this.Data = data;

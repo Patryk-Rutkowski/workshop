@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopServices", "Worksho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopTest", "WorkshopTest\WorkshopTest.csproj", "{7319D744-EFDF-4885-B94E-CBDC5FFCD5C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resolvers", "Resolvers\Resolvers.csproj", "{DA1F669E-3E24-42AE-8390-72CEBE583AA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{7319D744-EFDF-4885-B94E-CBDC5FFCD5C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7319D744-EFDF-4885-B94E-CBDC5FFCD5C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7319D744-EFDF-4885-B94E-CBDC5FFCD5C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA1F669E-3E24-42AE-8390-72CEBE583AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA1F669E-3E24-42AE-8390-72CEBE583AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA1F669E-3E24-42AE-8390-72CEBE583AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA1F669E-3E24-42AE-8390-72CEBE583AA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

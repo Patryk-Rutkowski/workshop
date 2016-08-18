@@ -5,11 +5,10 @@ C:\Users\patryk.rutkowski\Desktop\Workshop\Data\obj\Debug\Data.dll
 C:\Users\patryk.rutkowski\Desktop\Workshop\Data\obj\Debug\Data.pdb
 C:\Users\patryk.rutkowski\Desktop\Workshop2\Data\bin\Debug\Data.dll
 C:\Users\patryk.rutkowski\Desktop\Workshop2\Data\bin\Debug\Data.pdb
-C:\Users\patryk.rutkowski\Desktop\Workshop2\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 C:\Users\patryk.rutkowski\Desktop\Workshop2\Data\obj\Debug\Data.dll
 C:\Users\patryk.rutkowski\Desktop\Workshop2\Data\obj\Debug\Data.pdb
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Data\bin\Debug\Data.dll
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Data\bin\Debug\Data.pdb
-C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Data\obj\Debug\Data.dll
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Data\obj\Debug\Data.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache

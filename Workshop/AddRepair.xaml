@@ -6,23 +6,27 @@
         xmlns:local="clr-namespace:Workshop"
         mc:Ignorable="d"
         Title="AddRepair" Height="265.165" Width="552.697">
+    <Window.DataContext>
+        <local:AddRepairModelView />
+    </Window.DataContext>
     <Grid>
-        <ComboBox x:Name="categoryComboBox" HorizontalAlignment="Left" Margin="99,37,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="categoryComboBox_SelectionChanged"/>
-        <ComboBox x:Name="partsComboBox" HorizontalAlignment="Left" Margin="99,64,0,0" VerticalAlignment="Top" Width="120"/>
+        
+        <ComboBox x:Name="categoryComboBox" ItemsSource="{Binding GetAllCategory}" SelectedIndex="{Binding CategoryIndex}" HorizontalAlignment="Left" Margin="99,37,0,0" VerticalAlignment="Top" Width="120" />
+        <ComboBox x:Name="partsComboBox" ItemsSource="{Binding GetParts}" SelectedItem="{Binding SelectedPart}" HorizontalAlignment="Left" Margin="99,64,0,0" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label" Content="Kategoria" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Część" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Cena naprawy" HorizontalAlignment="Left" Margin="9,88,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2_Copy" Content="Cena częśći" HorizontalAlignment="Left" Margin="9,116,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="repairPrice" HorizontalAlignment="Left" Height="23" Margin="99,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="partsPrice" HorizontalAlignment="Left" Height="23" Margin="99,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="add" Content="Dodaj" HorizontalAlignment="Left" Margin="144,204,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.267,0.046" Click="add_Click"/>
+        <TextBox x:Name="repairPrice" Text="{Binding CenaNaprawy}" HorizontalAlignment="Left" Height="23" Margin="99,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="partsPrice" Text="{Binding CenaCzesci}" HorizontalAlignment="Left" Height="23" Margin="99,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="add" Content="Dodaj" Command="{Binding AddAll}" HorizontalAlignment="Left" Margin="144,204,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.267,0.046" />
         <Label x:Name="label3" Content="Przebieg" HorizontalAlignment="Left" Margin="9,145,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.089,0.127"/>
-        <TextBox x:Name="mileage" HorizontalAlignment="Left" Height="23" Margin="99,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <DatePicker x:Name="repairDate" HorizontalAlignment="Left" Margin="99,175,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="mileage" Text="{Binding Przebieg}" HorizontalAlignment="Left" Height="23" Margin="99,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="repairDate" SelectedDate="{Binding Data}" HorizontalAlignment="Left" Margin="99,175,0,0" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label4" Content="Mechanik" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="mechanicsComboBox" HorizontalAlignment="Left" Margin="99,10,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="add_Copy" Content=">>" HorizontalAlignment="Left" Margin="224,64,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.267,0.046" Click="add_Click"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="304,10,0,0" VerticalAlignment="Top" Height="189" Width="231"/>
+        <ComboBox x:Name="mechanicsComboBox" ItemsSource="{Binding Mechanics}" SelectedItem="{Binding SelectedMechanic}" HorizontalAlignment="Left" Margin="99,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="add_Copy" Command="{Binding AddPart}" Content=">>" HorizontalAlignment="Left" Margin="224,64,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.267,0.046" />
+        <DataGrid x:Name="SetParts" ItemsSource="{Binding SetParts}" HorizontalAlignment="Left" Margin="304,10,0,0" VerticalAlignment="Top" Height="189" Width="231" CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True" CanUserResizeRows="False" CanUserSortColumns="False"/>
         <Label x:Name="label5" Content="Data" HorizontalAlignment="Left" Margin="15,175,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

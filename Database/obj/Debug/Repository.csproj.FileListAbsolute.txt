@@ -31,3 +31,5 @@ C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Database\bin\Debug\Dapper.
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Database\obj\Debug\Repository.csprojResolveAssemblyReference.cache
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Database\obj\Debug\Database.dll
 C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Database\obj\Debug\Database.pdb
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Database\bin\Debug\NLog.dll
+C:\Users\patryk.rutkowski\Desktop\Workshop2\Database\bin\Debug\NLog.xml

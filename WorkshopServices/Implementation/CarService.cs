@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using Data;
 using Database;
+using System.Data.SqlClient;
+using NLog;
 
 namespace WorkshopServices.Implementation
 {
@@ -16,7 +18,8 @@ namespace WorkshopServices.Implementation
 
         public Result<DMLResult> CreateNewCar(string make, string model, int yearbook, string engine, string vin)
         {
-            DMLResult insert = _carRepository.CreateCar(make, model, yearbook, engine, vin);
+            DMLResult insert = new DMLResult();
+            insert = _carRepository.CreateCar(make, model, yearbook, engine, vin);
             Result<DMLResult> result = new Result<DMLResult>(insert);
             result.InsertCheck();
             return result;
@@ -56,7 +59,7 @@ namespace WorkshopServices.Implementation
 
         public Result<DMLResult> UpdateCar(string make, string model, int yearbook, string engine, string vin)
         {
-            DMLResult insert = _carRepository.UpdateCar(make, model, yearbook, engine, vin);
+            DMLResult insert  = _carRepository.UpdateCar(make, model, yearbook, engine, vin);
             Result<DMLResult> result = new Result<DMLResult>(insert);
             result.InsertCheck();
             return result;

@@ -5,11 +5,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using Extensions;
 using Data;
+using NLog;
 
 namespace Database
 {
     public class Repository
     {
+        private Logger logger;
         private const string SERVER = "TSTEODSERVER01V";
         private const string DATABASE = "testy";
         private const string USER = "Patryk_workshop";
@@ -48,7 +50,15 @@ namespace Database
         {
             using (SqlConnection conn = new SqlConnection(CONNECTION_STRING))
             {
-                return (List<T>)conn.Query<T>(storedProcedure, args, commandType: CommandType.StoredProcedure);
+                try {
+                    return (List<T>)conn.Query<T>(storedProcedure, args, commandType: CommandType.StoredProcedure);
+                }
+                catch (SqlException e)
+                {
+                    Logger logger = LogManager.GetCurrentClassLogger();
+                    logger.Warn(e.Message);
+                }
+                return null;
             }
         }
 

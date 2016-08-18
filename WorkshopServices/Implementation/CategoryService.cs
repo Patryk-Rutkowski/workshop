@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Data;
-using Extensions;
-using WorkshopServices.Interface;
 using Database;
+using NLog;
+using System.Data.SqlClient;
 
 namespace WorkshopServices
 {
@@ -18,7 +18,8 @@ namespace WorkshopServices
 
         public Result<DMLResult> CreateNewCategory(string name)
         {
-            DMLResult insertResult = _categoryRepository.CreateNewCategory(name);
+            DMLResult insertResult = new DMLResult();
+            insertResult = _categoryRepository.CreateNewCategory(name);
             Result<DMLResult> result = new Result<DMLResult>(insertResult);
             result.InsertCheck();
             return result;

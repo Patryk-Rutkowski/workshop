@@ -1,0 +1,15 @@
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\obj\Debug\Resolvers.csprojResolveAssemblyReference.cache
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\Resolvers.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\Resolvers.pdb
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\Database.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\WorkshopServices.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\Data.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\Extensions.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\Dapper.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\Database.pdb
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\WorkshopServices.pdb
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\Data.pdb
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\Extensions.pdb
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\bin\Debug\Dapper.xml
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\obj\Debug\Resolvers.dll
+C:\Users\mateusz.brzozowski\Desktop\workshop\workshop\Resolvers\obj\Debug\Resolvers.pdb
