@@ -53,11 +53,18 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ModelView\AddCarModelViewTest.cs" />
+    <Compile Include="ModelView\AddRepairModelViewTest.cs" />
+    <Compile Include="ModelView\EditModelViewTest.cs" />
+    <Compile Include="ModelView\MainWindowModelViewTests.cs" />
+    <Compile Include="ModelView\RepairHistoryModelViewTest.cs" />
     <Compile Include="Services\CarServiceTests.cs" />
     <Compile Include="Services\MechanicsServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +81,10 @@
     <ProjectReference Include="..\WorkshopServices\WorkshopServices.csproj">
       <Project>{F847396B-CA89-41A3-92F7-5D0C0A7677F2}</Project>
       <Name>WorkshopServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Workshop\Workshop.csproj">
+      <Project>{aac37fb8-3de6-44bd-9d21-f6de06474d31}</Project>
+      <Name>Workshop</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

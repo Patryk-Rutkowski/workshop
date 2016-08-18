@@ -176,7 +176,7 @@ namespace Workshop
 
         public ICommand AddAll { get { return new RelayCommand(ExecuteOrder, CheckAll); } }
 
-        private bool CheckAll()
+        public bool CheckAll()
         {
             if (CenaNaprawy != 0 && CenaCzesci != 0 && Przebieg != null && data != null && czesci.Count != 0)
                 return true;

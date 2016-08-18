@@ -41,8 +41,8 @@ namespace Workshop
             car__ = new Car();
             listCar = new List<Car>();
             year = new List<int>();
-            Yearbook = getDate();
-            Make = getAllMake();
+            Yearbook = GetDate();
+            Make = GetAllMake();
         }
 
   
@@ -84,7 +84,7 @@ namespace Workshop
             {
                 selectedYear = value;
                 OnPropertyChanged("SelectedYearbook");
-                if (allSelected())
+                if (AllSelected())
                 {
                     ListCar = GetCarMakeModelYearbook();
                 }
@@ -107,7 +107,7 @@ namespace Workshop
             set
             {
                 selectedMake = value;
-                Model = getAllModel();
+                Model = GetAllModel();
                 OnPropertyChanged("SelectedMake");
             }
         }
@@ -139,7 +139,7 @@ namespace Workshop
             {
                 selectedModel = value;
                 OnPropertyChanged("SelectedModel");
-                if (allSelected())
+                if (AllSelected())
                     ListCar = GetCarMakeModelYearbook();
             }
 
@@ -151,7 +151,7 @@ namespace Workshop
             {
                 selectedModelIndex = value;
                 OnPropertyChanged("SelectedModel");
-                if (allSelected())
+                if (AllSelected())
                     ListCar = GetCarMakeModelYearbook();
             }
         }
@@ -194,11 +194,11 @@ namespace Workshop
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-        public ICommand AddRepairHistory { get { return new RelayCommand(AddRepairVin, VinExcute); } }
-        public ICommand RepairHistory { get { return new RelayCommand ( HistoryRepair, VinExcute); } }
-        public ICommand GetCar { get { return new RelayCommand(GettingCar, VinExcute); } }
-        public ICommand AddCar { get { return new RelayCommand(CreateCar, NewCar); } }
-        public ICommand EditCar {  get { return new RelayCommand(Edit, VinExcute); } }
+        public ICommand AddRepairHistory { get { return new RelayCommand(AddRepairVin); } }
+        public ICommand RepairHistory { get { return new RelayCommand ( HistoryRepair); } }
+        public ICommand GetCar { get { return new RelayCommand(GettingCar); } }
+        public ICommand AddCar { get { return new RelayCommand(CreateCar); } }
+        public ICommand EditCar {  get { return new RelayCommand(Edit); } }
 
         private void Edit()
         {
@@ -209,11 +209,6 @@ namespace Workshop
             }
             else
                 MessageBox.Show("Wybierz samochod", "Error");
-        }
-
-        private bool NewCar()
-        {
-            return true;
         }
 
         private void CreateCar()
@@ -231,21 +226,24 @@ namespace Workshop
             ListCar = GetCarClick();
         }
 
-        public bool VinExcute()
-        {
-            return !CarExist(car_);
-        }
+        //public bool VinExcute()
+        //{
+        //    if (car__.Vin != null)
+        //        return true;
+        //    else return false;
+        //    //return !CarExist(car_);
+        //}
 
-        public bool CarExist(Car _car)
-        {
-            if(_car == null)
-            return false;
-            else
-            {
-                _car = new Car();
-                return false;
-            }
-        }
+        //public bool CarExist(Car _car)
+        //{
+        //    if(_car == null)
+        //    return false;
+        //    else
+        //    {
+        //        _car = new Car();
+        //        return false;
+        //    }
+        //}
 
         public List<Car> GetCarClick()
         {
@@ -297,7 +295,7 @@ namespace Workshop
                 return null;
         }
 
-        public List<int> getDate()
+        public List<int> GetDate()
         {
             List<int> year_ = new List<int>();
             DateTime a = DateTime.Now;
@@ -310,7 +308,7 @@ namespace Workshop
             return year_;
         }
 
-        public List<Make> getAllMake()
+        public List<Make> GetAllMake()
         {
             List<Make> car_ = new List<Make>();
             Result<List<Make>> car = _carSrvice.GetAvailableMakes();
@@ -319,16 +317,16 @@ namespace Workshop
             return car_;
         }
 
-        public bool selectedCarMake()
+        public bool SelectedCarMake()
         {
             if (selectedMakeIndex > -1)
                 return true;
             else
                 return false;
         }
-        public List<CarModel> getAllModel()
+        public List<CarModel> GetAllModel()
         {
-              if (selectedCarMake())
+              if (SelectedCarMake())
             {
                 Result<List<CarModel>> model = _carSrvice.GetModelByMake(SelectedMake);
                 List<CarModel> car_ = new List<CarModel>();
@@ -341,9 +339,9 @@ namespace Workshop
                  return null;
         }
 
-        public bool allSelected()
+        public bool AllSelected()
         {
-            if (selectedCarMake() && (SelectedModelIndex > -1) &&(SelectedYearbook > -1) )
+            if (SelectedCarMake() && (SelectedModelIndex > -1) &&(SelectedYearbook > -1) )
             {
                     return true;
              }

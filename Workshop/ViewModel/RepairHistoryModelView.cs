@@ -13,7 +13,7 @@ using WorkshopServices.Interface;
 
 namespace Workshop
 {
-    class RepairHistoryModelView : INotifyPropertyChanged
+   public class RepairHistoryModelView : INotifyPropertyChanged
     {
         public List<RepairTablePresentation> repairStory = new List<RepairTablePresentation>();
         private IRepairService _carSrvice;

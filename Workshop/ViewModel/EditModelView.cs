@@ -12,7 +12,7 @@ using WorkshopServices;
 
 namespace Workshop
 {
-    class EditModelView : INotifyPropertyChanged
+   public class EditModelView : INotifyPropertyChanged
     {
         public EditModelView(string vin, string makeCar, string modelCar, int yearCar, string engineCar)
         {
@@ -88,7 +88,7 @@ namespace Workshop
         }
 
         public ICommand EditCar { get { return new RelayCommand(Add, AllExist); } }
-        private bool AllExist()
+        public bool AllExist()
         {
             if (Vin != null && Make != null && Model != null && Year != 0 && Engine != null)
                 return true;
