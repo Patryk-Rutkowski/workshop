@@ -50,12 +50,10 @@
   <ItemGroup>
     <Compile Include="Implementation\CarRepository.cs" />
     <Compile Include="Implementation\CategoryRepository.cs" />
-    <Compile Include="Implementation\ErrorRepository.cs" />
     <Compile Include="Implementation\MechanicsRepository.cs" />
     <Compile Include="Implementation\PartRepository.cs" />
     <Compile Include="Implementation\RepairRepository.cs" />
     <Compile Include="Interface\ICarRepository.cs" />
-    <Compile Include="Interface\IErrorRepository.cs" />
     <Compile Include="Interface\IMechanicsRepository.cs" />
     <Compile Include="Interface\ICategoryRepository.cs" />
     <Compile Include="Interface\IPartRepository.cs" />

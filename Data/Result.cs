@@ -1,4 +1,4 @@
-﻿using Data;
+﻿using NLog;
 
 namespace Data
 {
@@ -8,10 +8,11 @@ namespace Data
         public T Data { get; set; }
         public string Message { get; set; } = null;
         public bool Success { get; set; } = true;
-
+        private static Logger logger;
 
         public Result(T data)
         {
+            logger = LogManager.GetCurrentClassLogger();
             this.Data = data;
         }
 
@@ -19,7 +20,7 @@ namespace Data
         {
             if (Data == null)
             {
-                //TODO Zapis do tabeli z errorami
+                logger.Info("Null data");
                 Success = false;
                 Message = "Nie znaleziono obiektu";
             }
@@ -31,9 +32,9 @@ namespace Data
             DMLResult insertResult = (DMLResult)(object)Data;
             if (!insertResult.Success)
             {
-                //TODO Zapis do tabeli z errorami
+                logger.Info("Record isn't inserted");
                 Success = false;
-                Message = "";
+                Message = "Bład przy wpisywanie do bazy";
             }
         }
 
