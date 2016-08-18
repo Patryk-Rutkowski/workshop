@@ -12,11 +12,13 @@ namespace Database.Implementation
             List<DMLResult> results = new List<DMLResult>();
             results.Add(Repository.InsertObject("workshop_insert_repair", new { vin = vin, price = price, mileage = mileage, repair_date = repairDate, mechanic_id = mechanicId, parts_price = partsPrice }));
 
-            int repairdId = results[0].Count;
+            if (results[0].Success)
+            {
+                int repairdId = results[0].Count;
 
-            foreach (int part in partsId)
-                results.Add(Repository.InsertObject("workshop_what_parts_repaired", new { repair_id = repairdId, part_id = part }));
-
+                foreach (int part in partsId)
+                    results.Add(Repository.InsertObject("workshop_what_parts_repaired", new { repair_id = repairdId, part_id = part }));
+            }
             return results;
         }
 

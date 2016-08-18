@@ -1,12 +1,17 @@
 ﻿using Data;
-using NLog;
+using Database;
+using Extensions;
 using Resolvers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using WorkshopServices;
+using WorkshopServices.Implementation;
 
 namespace Workshop
 {
@@ -14,11 +19,13 @@ namespace Workshop
     {
         public ICarService _carSrvice;
         public Car car_;
+        public Car car__;
         public List<int> year;
         public List<Car> listCar;
         public List<Make> carMake;
-        public List<CarModel> CarModel;
+        public List<CarModel> carModel;
         public int selectedYear;
+        public int selectedCarIndex = -1;
         public int selectedMakeIndex = -1;
         public int selectedModelIndex = -1;
         public string selectedMake;
@@ -31,21 +38,21 @@ namespace Workshop
             selectedYear = 0;
             _carSrvice = ICarServiceResolver.Get();
             car_ = new Car();
+            car__ = new Car();
             listCar = new List<Car>();
             year = new List<int>();
             Yearbook = getDate();
             Make = getAllMake();
-            
-            Logger logger = LogManager.GetCurrentClassLogger();
-            logger.Debug("log message");
         }
+
+  
 
         public string Vin
         {
-            get { return car_.Vin; }
+            get { return car__.Vin; }
             set
             {
-                car_.Vin = value;
+                car__.Vin = value;
                 OnPropertyChanged("Vin");
             }
         }
@@ -117,10 +124,10 @@ namespace Workshop
 
         public List<CarModel> Model
         {
-            get { return CarModel; }
+            get { return carModel; }
             set
             {
-                CarModel = value;
+                carModel = value;
                 OnPropertyChanged("Model");
             }
         }
@@ -133,9 +140,7 @@ namespace Workshop
                 selectedModel = value;
                 OnPropertyChanged("SelectedModel");
                 if (allSelected())
-                {
                     ListCar = GetCarMakeModelYearbook();
-                }
             }
 
         }
@@ -147,9 +152,7 @@ namespace Workshop
                 selectedModelIndex = value;
                 OnPropertyChanged("SelectedModel");
                 if (allSelected())
-                {
                     ListCar = GetCarMakeModelYearbook();
-                }
             }
         }
 
@@ -173,7 +176,15 @@ namespace Workshop
             }
 
         }
-
+        public int SelectedCarIndex
+        {
+            get { return selectedCarIndex; }
+            set
+            {
+                selectedCarIndex = value;
+                OnPropertyChanged("SelectedCarIndex");
+            }
+        }
 
         private void OnPropertyChanged(string propertyName)
         {
@@ -186,11 +197,37 @@ namespace Workshop
         public ICommand AddRepairHistory { get { return new RelayCommand(AddRepairVin, VinExcute); } }
         public ICommand RepairHistory { get { return new RelayCommand ( HistoryRepair, VinExcute); } }
         public ICommand GetCar { get { return new RelayCommand(GettingCar, VinExcute); } }
+        public ICommand AddCar { get { return new RelayCommand(CreateCar, NewCar); } }
+        public ICommand EditCar {  get { return new RelayCommand(Edit, VinExcute); } }
+
+        private void Edit()
+        {
+            if (selectedCarIndex > -1)
+            {
+                Edit edit = new Edit(SelectedListCar.Vin, SelectedListCar.Make, SelectedListCar.Model, SelectedListCar.Yearbook, SelectedListCar.Engine);
+                edit.Show();
+            }
+            else
+                MessageBox.Show("Wybierz samochod", "Error");
+        }
+
+        private bool NewCar()
+        {
+            return true;
+        }
+
+        private void CreateCar()
+        {
+            AddCar newCar = new AddCar();
+            newCar.Show();
+        }
+
+
         public void GettingCar()
         {
             listCar = null;
-            car_.Vin = Vin;
             ListCar = null;
+            car__.Vin = Vin;
             ListCar = GetCarClick();
         }
 
@@ -201,12 +238,19 @@ namespace Workshop
 
         public bool CarExist(Car _car)
         {
+            if(_car == null)
             return false;
+            else
+            {
+                _car = new Car();
+                return false;
+            }
         }
 
         public List<Car> GetCarClick()
         {
-            Result<Car> car = _carSrvice.GetByVin(car_.Vin);
+
+            Result<Car> car = _carSrvice.GetByVin(car__.Vin);
             if (car.Success)
             {
                 List<Car> list = new List<Car>();
@@ -219,13 +263,23 @@ namespace Workshop
         }
         public void HistoryRepair()
         {
-            RepairHistory repairHistory = new RepairHistory(SelectedListCar.Vin);
-            repairHistory.Show();
+            if (selectedCarIndex > -1)
+            {
+                RepairHistory repairHistory = new RepairHistory(SelectedListCar.Vin);
+                repairHistory.Show();
+            }
+            else
+                MessageBox.Show("Wybierz samochod", "Error");
         }
         public void AddRepairVin()
         {
-            AddRepair repairAdd = new AddRepair(SelectedListCar.Vin);
-            repairAdd.Show();
+            if (selectedCarIndex <= -1)
+                MessageBox.Show("Wybierz samochod", "Error");
+            else
+            {
+                AddRepair repairAdd = new AddRepair(SelectedListCar.Vin);
+                repairAdd.Show();
+            }
         }
 
 

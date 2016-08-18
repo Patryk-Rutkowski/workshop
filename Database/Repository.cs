@@ -11,7 +11,6 @@ namespace Database
 {
     public class Repository
     {
-        private Logger logger;
         private const string SERVER = "TSTEODSERVER01V";
         private const string DATABASE = "testy";
         private const string USER = "Patryk_workshop";

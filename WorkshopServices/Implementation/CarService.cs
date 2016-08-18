@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using Data;
 using Database;
-using System.Data.SqlClient;
-using NLog;
 
 namespace WorkshopServices.Implementation
 {

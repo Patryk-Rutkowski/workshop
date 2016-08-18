@@ -5,26 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Workshop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="535.228" Width="1153.038">
-    <Window.DataContext>
+        Title="WorkShop" Height="535.228" Width="1153.038">
+  <Window.DataContext>
         <local:MainWindowModelView />
     </Window.DataContext>
     <Grid Margin="0,0,0,0">
         <Menu Width="Auto" Height="40"  Margin="0,0,0,475">
             <MenuItem Header="Dodaj">
-                <MenuItem Header="Samochód" />
-                <MenuItem Header="Mechanik"  />
-                <MenuItem Header="Naprawa"  />
-                <MenuItem Header="Część"  />
+                <MenuItem Header="Samochód" Command="{Binding AddCar}" />
+                <MenuItem Header="Mechanik" IsEnabled="False" />
+                <MenuItem Header="Naprawa"  Command="{Binding AddRepairHistory}" />
+                <MenuItem Header="Część" IsEnabled="False" />
             </MenuItem>
-            <MenuItem Header="Aktualizuj">
-                <MenuItem Header="Samochód" />
-                <MenuItem Header="Mechanik"  />
+            <MenuItem Header="Aktualizuj" >
+                <MenuItem Header="Samochód" Command="{Binding EditCar}"/>
+                <MenuItem Header="Mechanik"  IsEnabled="False"/>
              
             </MenuItem>
             <MenuItem Header="Usuń">
-                <MenuItem Header="Mechanik"  />
-                <MenuItem Header="Część"  />
+                <MenuItem Header="Mechanik"  IsEnabled="False"/>
+                <MenuItem Header="Część" IsEnabled="False" />
             </MenuItem>
         </Menu>
 
@@ -38,10 +38,10 @@
         <ComboBox x:Name="model_combo" ItemsSource="{Binding Model}" SelectedItem="{Binding SelectedModel}" SelectedIndex="{Binding SelectedModelIndex}" HorizontalAlignment="Left" Margin="650,57,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="make_combo" ItemsSource="{Binding Make}" SelectedItem="{Binding SelectedMake}" SelectedIndex="{Binding SelectedMakeIndex}"  HorizontalAlignment="Left" Margin="650,23,0,0" VerticalAlignment="Top" Width="120" />
         <ComboBox x:Name="Yearbook" ItemsSource="{Binding Yearbook}" SelectedItem="{Binding SelectedYearbook}"  HorizontalAlignment="Left" Margin="650,93,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.485,3.281" />
-        <DataGrid x:Name="ListCar" ItemsSource="{Binding ListCar}" SelectedItem="{Binding SelectedListCar}" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Height="398" Width="535"  ColumnWidth="70" CanUserReorderColumns="False" MaxColumnWidth="150" CanUserSortColumns="False" MinColumnWidth="80" CanUserResizeRows="False"  CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True"/>
+        <DataGrid x:Name="ListCar" ItemsSource="{Binding ListCar}" SelectedItem="{Binding SelectedListCar}" SelectedIndex="{Binding SelectedCarIndex}"  HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Height="398" Width="535"  ColumnWidth="70" CanUserReorderColumns="False" MaxColumnWidth="150" CanUserSortColumns="False" MinColumnWidth="80" CanUserResizeRows="False"  CanUserDeleteRows="False" CanUserAddRows="False" IsReadOnly="True"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="858,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="VIN"/><LineBreak/><Run/></TextBlock>
-        <Button x:Name="edit_button" IsEnabled="{Binding OnButton}" Command="{Binding edit_button}" Content="Edytuj" HorizontalAlignment="Left" Margin="610,193,0,0" VerticalAlignment="Top" Width="75" />
-        <Button x:Name="delete_button" IsEnabled="{Binding OnButton}" Command="{Binding delete_button}" Content="Usuń" HorizontalAlignment="Left" Margin="610,248,0,0" VerticalAlignment="Top" Width="75" />
+        <Button x:Name="edit_button" Command="{Binding EditCar}" IsEnabled="{Binding OnButton}"  Content="Edytuj" HorizontalAlignment="Left" Margin="610,193,0,0" VerticalAlignment="Top" Width="75" />
+        <Button x:Name="delete_button" IsEnabled="False" Command="{Binding delete_button}" Content="Usuń" HorizontalAlignment="Left" Margin="610,248,0,0" VerticalAlignment="Top" Width="75" />
 
     </Grid>
 </Window>

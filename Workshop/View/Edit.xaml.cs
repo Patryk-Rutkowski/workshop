@@ -15,13 +15,15 @@ using System.Windows.Shapes;
 namespace Workshop
 {
     /// <summary>
-    /// Interaction logic for AddPart.xaml
+    /// Interaction logic for Edit.xaml
     /// </summary>
-    public partial class AddPart : Window
+    public partial class Edit : Window
     {
-        public AddPart()
+        public Edit(string vin, string make, string model, int year, string engine)
         {
+            this.DataContext = new EditModelView(vin, make, model, year, engine);
             InitializeComponent();
         }
+     
     }
 }

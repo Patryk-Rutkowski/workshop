@@ -2,7 +2,6 @@
 using Data;
 using WorkshopServices.Interface;
 using Database.Interface;
-using NLog;
 
 namespace WorkshopServices.Implementation
 {

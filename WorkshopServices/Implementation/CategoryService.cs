@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using Data;
 using Database;
-using NLog;
-using System.Data.SqlClient;
 
 namespace WorkshopServices
 {
