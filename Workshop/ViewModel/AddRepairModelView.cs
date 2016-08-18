@@ -23,16 +23,14 @@ namespace Workshop
         public List<ComboBoxMechanic> mechanics;// = new Result<List<Mechanic>>();
         public List<ComboBoxPart> parts;
         public ObservableCollection<ComboBoxPart> czesci = new ObservableCollection<ComboBoxPart>();
-        // public List<Part> 
-
-        int indexCategory = -1;
-        int cenaNaprawy;
-        int cenaCzesci;
+        private int indexCategory = -1;
+        private int cenaNaprawy;
+        private int cenaCzesci;
         private string vin = null;
         string przebieg;
-        ComboBoxMechanic mechanik;
-        DateTime data = DateTime.Now;
-        ComboBoxPart nazwaCzesci;
+        private ComboBoxMechanic mechanik;
+        private DateTime data = DateTime.Now;
+        private ComboBoxPart nazwaCzesci;
         public event PropertyChangedEventHandler PropertyChanged;
         public IMechanicsService _mechanicsRepository;
         public ICategoryService _categoryRepository;
@@ -65,7 +63,6 @@ namespace Workshop
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-
 
         public List<ComboBoxMechanic> Mechanics
         {
@@ -165,7 +162,6 @@ namespace Workshop
                 mechanik = value;
                 OnPropertyChanged("SelectedMechanic");
             }
-
         }
         public ObservableCollection<ComboBoxPart> SetParts
         {
@@ -196,7 +192,6 @@ namespace Workshop
                 partsId[i] = czesci[i].Id;
                 MessageBox.Show(partsId[i].ToString());
             }
-
            Result<List<DMLResult>> repair = _repairRepository.CreateNewRepair(vin,Convert.ToDouble(CenaNaprawy), Convert.ToInt32(Przebieg), data, SelectedMechanic.Id, Convert.ToDouble(CenaCzesci), partsId);
 
         }
@@ -243,24 +238,6 @@ namespace Workshop
             else
                 return false;
         }
-    /*    public void ExecuteOrder()
-        {
-            public int[] idCzesci = new int[czesci.Count()];
-        MessageBox.Show(SelectedName);
-            foreach(Part one in czesci)
-            idCzesci
-        //  Result<List<DMLResult>> repair = _repairRepository.CreateNewRepair(vin,CenaNaprawy, Przebieg, data, );
-    }
-
-    public bool CheckAll()
-    {
-        if (CenaNaprawy != 0 && CenaCzesci != 0 && Przebieg != null && data != null && czesci.Count != 0)
-            return true;
-        else
-            return false;
-    }*/
-
-
 }
 
 }

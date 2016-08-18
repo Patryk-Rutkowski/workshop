@@ -23,7 +23,6 @@ namespace Workshop
             engine = engineCar;
 
         }
-
         public event PropertyChangedEventHandler PropertyChanged;
         private string make;
         private string vinNumber;

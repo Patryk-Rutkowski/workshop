@@ -23,7 +23,7 @@ namespace Workshop
         public List<int> year;
         public List<Car> listCar;
         public List<Make> carMake;
-        public List<CarModel> CarModel;
+        public List<CarModel> carModel;
         public int selectedYear;
         public int selectedCarIndex = -1;
         public int selectedMakeIndex = -1;
@@ -124,10 +124,10 @@ namespace Workshop
 
         public List<CarModel> Model
         {
-            get { return CarModel; }
+            get { return carModel; }
             set
             {
-                CarModel = value;
+                carModel = value;
                 OnPropertyChanged("Model");
             }
         }
